@@ -1,2 +1,0 @@
-Username:force
-IP Address:ec2-54-151-248-177.ap-southeast-1.compute.amazonaws.com
