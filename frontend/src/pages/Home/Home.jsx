@@ -41,7 +41,6 @@ function Home () {
       <img src={home} style={{width:'119.3%'}}/>
       <img src={footer} style={{width:'100%'}}/>
     </div>
-   
   );
 }
 

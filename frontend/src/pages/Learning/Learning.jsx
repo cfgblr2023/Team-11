@@ -3,7 +3,7 @@ import './Learning.css';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-// import tele from './tele.png';
+import tele from '../Home/tele.png';
 
 const courses = [
   {
@@ -139,8 +139,8 @@ const Learning = () => {
               </NavDropdown> */}
             <NavDropdown title="CONNECT" id="connect-dropdown">
               <div className="telegram-link">
-                    {/* <img src={tele} alt="Telegram" style={{ width: '15%' }} className="tele-logo" /> */}
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img src={tele} alt="Telegram" style={{ width: '15%' }} className="tele-logo" />
+                    <a href="https://web.telegram.org/k/#@Lamp_info_bot" target="_blank" rel="noopener noreferrer">
                       Telegram
                     </a>
               </div>
