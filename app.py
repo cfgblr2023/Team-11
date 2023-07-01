@@ -11,11 +11,6 @@ from googleapiclient.errors import HttpError
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/classroom.courses.readonly']
 
-
-
-
-
-
 from flask import Flask, jsonify
 
 app = Flask(__name__)
