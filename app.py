@@ -12,10 +12,19 @@ from googleapiclient.errors import HttpError
 SCOPES = ['https://www.googleapis.com/auth/classroom.courses.readonly']
 
 
+
+
+
+
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+from flask_cors import CORS, cross_origin
+cors = CORS(app)
+# Define the API endpoint to serve the course names and links
+@app.route('/api/courses', methods=['GET'])
 def main():
-    """Shows basic usage of the Classroom API.
-    Prints the names of the first 10 courses the user has access to.
-    """
+
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -41,7 +50,6 @@ def main():
         results = service.courses().list(pageSize=10).execute()
         courses = results.get('courses', [])
 
-        # teachers = service.courses().teachers().list(courseId=courses['courseId']).execute().get('teachers', [])
         
         if not courses:
             print('No courses found.')
@@ -52,12 +60,19 @@ def main():
             print(course['name'])
             print(course)
 
-        # print('Teachers:')
-        # for teacher in teachers:
-        #     print(teacher['profile']['name']['fullName'])
     except HttpError as error:
         print('An error occurred: %s' % error)
 
+    response = []
+    for course in courses:
+        response.append({
+            'name': course['name'],
+            'link': course['alternateLink']
+        })
+    
+    # Return the data as JSON
+    return jsonify(response)
+
 
 if __name__ == '__main__':
-    main()
+    app.run()
