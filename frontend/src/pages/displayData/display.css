@@ -1,13 +1,13 @@
-
-h1{
+h1 {
     text-align: center;
-    text-decoration: underline;
-}
-.display-container {
+  }
+  
+  .display-container {
+    margin-top: 80px; /* Adjust the margin-top value to fit your navbar height */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 80px); /* Adjust the height calculation based on navbar height */
   }
   
   .display-title {
@@ -28,8 +28,8 @@ h1{
     width: 400px;
     height: 300px;
     margin: 10px;
-    background-color: #f2ddcc;
-    border: 2px solid #000000;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -51,8 +51,8 @@ h1{
   }
   
   .btn-primary {
-    background-color: #da971c;
-    color: #ffffff;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 3px;
@@ -61,6 +61,6 @@ h1{
   }
   
   .btn-primary:hover {
-    background-color: #8faece;
+    background-color: #0056b3;
   }
   

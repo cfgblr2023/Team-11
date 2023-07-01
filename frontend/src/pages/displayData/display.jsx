@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './display.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Snippet from '../Home/Snippet.png';
-import tele from '../Home/tele.png';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import tele from '../Home/tele.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './display.css';
 
 const Display = () => {
   const [courses, setCourses] = useState([]);
@@ -61,7 +61,7 @@ const Display = () => {
         ))}
       </div>
     </div>
-  </div>
+    </div>
   </div>
   );
 };
