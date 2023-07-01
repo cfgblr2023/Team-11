@@ -41,7 +41,7 @@ def main():
         results = service.courses().list(pageSize=10).execute()
         courses = results.get('courses', [])
 
-        teachers = service.courses().teachers().list(courseId=courses['courseId']).execute().get('teachers', [])
+        # teachers = service.courses().teachers().list(courseId=courses['courseId']).execute().get('teachers', [])
         
         if not courses:
             print('No courses found.')
@@ -52,9 +52,9 @@ def main():
             print(course['name'])
             print(course)
 
-        print('Teachers:')
-        for teacher in teachers:
-            print(teacher['profile']['name']['fullName'])
+        # print('Teachers:')
+        # for teacher in teachers:
+        #     print(teacher['profile']['name']['fullName'])
     except HttpError as error:
         print('An error occurred: %s' % error)
 
