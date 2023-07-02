@@ -28,8 +28,8 @@ h1 {
     width: 400px;
     height: 300px;
     margin: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    background-color: #e9cfb1;
+    border: 2px solid #000000;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -51,8 +51,8 @@ h1 {
   }
   
   .btn-primary {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 3px;

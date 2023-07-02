@@ -48,7 +48,7 @@ const Display = () => {
     </Navbar>
     <div className="d-flex justify-content-center align-items-center h-100">
     <div>
-      <h1>COURSES:</h1>
+      <h1>MY COURSES</h1>
       <div className="card-deck">
         {courses.map(course => (
           <div className="card mb-4" key={course.name}>
