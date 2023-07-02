@@ -4,37 +4,39 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 // import tele from './tele.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import myProfile from './Profileicon.png';
-
+import Snippet from './Snippet.png';
 
 class ViewCourses extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showCourses: false,
-      courses: [
-        'Course 1',
-        'Course 2',
-        'Course 3',
-        'Course 4',
-        'Course 5',
-        'Course 6'
-      ]
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     showCourses: false,
+  //     courses: [
+  //       'Course 1',
+  //       'Course 2',
+  //       'Course 3',
+  //       'Course 4',
+  //       'Course 5',
+  //       'Course 6'
+  //     ]
+  //   };
+  // }
 
   handleViewCourses = () => {
-    this.setState({ showCourses: true });
+    // this.setState({ showCourses: true });
+    console.log('View my Courses button clicked!');
   };
 
   handleRegisterCourse = () => {
-    console.log('Register for New Course button clicked!');
+    window.location.href='/learning';
   };
 
   render() {
-    const { showCourses, courses } = this.state;
+    // const { showCourses, courses } = this.state;
 
     return (
         <div >
+        <img src={Snippet} style={{width:'100%'}}/> 
         <Navbar bg="light" expand="lg">   
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -45,11 +47,11 @@ class ViewCourses extends React.Component {
             <Nav.Link href="#">ALL CAMPAIGN</Nav.Link>
             <Nav.Link href="#">PROJECT</Nav.Link>
             <Nav.Link href="#">VOLUNTEERS</Nav.Link>
-            <Nav.Link href="#">LEARNINGS</Nav.Link>
-            <NavDropdown title="REGISTER" id="register-dropdown">
+            
+            {/* <NavDropdown title="REGISTER" id="register-dropdown">
             <NavDropdown.Item href="https://forms.gle/13mCom2jDYK83ZRLA">STUDENT</NavDropdown.Item>
             <NavDropdown.Item href="https://forms.gle/vfUK7pAMKwke1xuW9">VOLUNTEERS</NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
           <NavDropdown title="CONNECT" id="connect-dropdown">
           <div className="telegram-link">
                 {/* <img src={tele} alt="Telegram" style={{ width: '15%' }} className="tele-logo" /> */}
@@ -65,19 +67,19 @@ class ViewCourses extends React.Component {
       </Navbar>
      
      <div>
-        <img src={myProfile} style={{top:'12%',position:'absolute',right:'5%',display:'flex',flexDirection:'column',width:'40px'} }></img>
+        <img src={myProfile} style={{top:'35%',position:'absolute',right:'5%',display:'flex',flexDirection:'column',width:'40px'} }></img>
      </div>
 
      <div>
-        <h2 style={{position:'absolute',right:'10%',top:'12%',color:'black'}}>Welcome, Aaditya Goel!</h2>
+        <h2 style={{position:'absolute',right:'10%',top:'35%',color:'black'}}>Welcome, Aaditya Goel!</h2>
      </div>
 
       <div>
         <img src={myImage} style={{ width: '100%', height: 'auto'}}></img>
 
-        <div style={{ position: 'absolute',top:'5px',right: '33%', display: 'flex', flexDirection: 'column',borderRadius: '50%', border: 'none',opacity:'0.9'}}>
+        <div style={{ position: 'absolute',top:'320px',right: '33%', display: 'flex', flexDirection: 'column',borderRadius: '50%', border: 'none',opacity:'0.9'}}>
           <button onClick={this.handleViewCourses} className="fancy"
-          style={{position:'absolute',color:'rgb(255, 230, 243)',backgroundColor:'black',width:'300px',height:'200px',top:'150px',fontSize: '15px',borderRadius: '50px',
+          style={{position:'absolute',color:'rgb(255, 230, 243)',backgroundColor:'black',width:'300px',height:'200px',top:'70%',fontSize: '15px',borderRadius: '50px',
           fontWeight: 'bold',
           border: 'none',
           cursor: 'pointer',
@@ -85,9 +87,9 @@ class ViewCourses extends React.Component {
           >VIEW MY COURSES!</button>
         </div>
         
-        <div style={{ position: 'absolute',top:'250px',right: '33%', display: 'flex', flexDirection: 'column',borderRadius: '50%', border: 'none',opacity:'0.9'}}>
+        <div style={{ position: 'absolute',top:'550px',right: '33%', display: 'flex', flexDirection: 'column',borderRadius: '50%', border: 'none',opacity:'0.9'}}>
           <button onClick={this.handleRegisterCourse}  className="fancy"
-          style={{position:'absolute',color:'rgb(255, 230, 243)',backgroundColor:'black',width:'300px',height:'200px',top:'150px',left:'74%',fontSize: '15px',
+          style={{position:'absolute',color:'rgb(255, 230, 243)',backgroundColor:'black',width:'300px',height:'200px',left:'74%',fontSize: '15px',
           fontWeight: 'bold',
           border: 'none',borderRadius: '50px',
           cursor: 'pointer',
@@ -95,7 +97,7 @@ class ViewCourses extends React.Component {
         </div>
         <div style={{ clear: 'both' }}></div>
 
-        {showCourses && (
+        {/* {showCourses && (
           <div>
             <h2>My Courses</h2>
             <ul>
@@ -104,7 +106,7 @@ class ViewCourses extends React.Component {
               ))}
             </ul>
           </div>
-        )}
+        )} */}
       </div>
       </div>
     );

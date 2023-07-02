@@ -1,13 +1,25 @@
+
+.body-container{
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
 .learning-container {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
   background-color: #f9f9f9;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
-.body-container {
-  background-color: #f1f1f1; /* Update this line with your desired background color */
-}
+
 
 .course-item {
   margin-bottom: 20px;

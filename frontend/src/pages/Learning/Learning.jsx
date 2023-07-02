@@ -3,7 +3,15 @@ import './Learning.css';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+<<<<<<< HEAD
+// import tele from './tele.png';
+import myImage from './bg.jpg';
+import myHeader from './Snippet.png';
+
+
+=======
 import tele from '../Home/tele.png';
+>>>>>>> 5a85fcae2156549fbcbcbc9a2a354ca28d1b46f1
 
 const courses = [
   {
@@ -120,7 +128,11 @@ const Learning = () => {
   };
 
   return (
-    <>
+    
+  
+      <> 
+      <div>
+      <img src={myHeader} style={{width:'100%'}}/>
       <Navbar bg="light" expand="lg">
           
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -132,7 +144,7 @@ const Learning = () => {
               <Nav.Link href="#">ALL CAMPAIGN</Nav.Link>
               <Nav.Link href="#">PROJECT</Nav.Link>
               <Nav.Link href="#">VOLUNTEERS</Nav.Link>
-              <Nav.Link href="#">LEARNINGS</Nav.Link>
+              {/* <Nav.Link href="#">LEARNINGS</Nav.Link> */}
               {/* <NavDropdown title="REGISTER" id="register-dropdown">
               <NavDropdown.Item href="https://forms.gle/13mCom2jDYK83ZRLA">STUDENT</NavDropdown.Item>
               <NavDropdown.Item href="https://forms.gle/vfUK7pAMKwke1xuW9">VOLUNTEERS</NavDropdown.Item>
@@ -150,25 +162,32 @@ const Learning = () => {
             </Nav>
           </Navbar.Collapse>
       </Navbar>
+
+
     <div className="body-container">
     <div className="learning-container">
-      <h1>Learning</h1>
-      <p>Welcome to the Learning page!</p>
-      <p>Join our classrooms:</p>
+      <h1 style ={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>LEARNINGS</h1>
+      <h2 style ={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Welcome to the Learning page!</h2>
+      <br/>
+      <h4 style ={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Join our classrooms:</h4>
 
-      <div className="filter-section">
+      <div className="filter-section" style ={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <input
           type="text"
           placeholder="Search courses"
           value={searchQuery}
           onChange={handleSearchInputChange}
+          style = {{backgroundColor:'rgb(255, 230, 243)',width:'300px',height:'40px',border:'none',borderRadius:'5px'}}
         />
-        <select value={sortBy} onChange={handleSortByChange}>
+        </div>
+        <div style ={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}> 
+        <select value={sortBy} onChange={handleSortByChange} style = {{backgroundColor:'rgb(255, 230, 243)',border:'none',borderRadius:'5px'}}>
           <option value="title">Sort by Title</option>
           <option value="description">Sort by Description</option>
         </select>
       </div>
 
+      <br/>
       <ul>
         {currentCourses.map((course, index) => (
           <li key={index} className="course-item">
@@ -212,6 +231,7 @@ const Learning = () => {
           variant="primary"
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
+          style={{backgroundColor:'rgb(255, 128, 255)',color:'black'}}
         >
           Previous
         </Button>
@@ -219,10 +239,12 @@ const Learning = () => {
           variant="primary"
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={indexOfLastCourse >= sortedCourses.length}
+          style={{backgroundColor:'rgb(255, 128, 255)',color:'black'}}
         >
           Next
         </Button>
       </div>
+    </div>
     </div>
     </div>
     </>

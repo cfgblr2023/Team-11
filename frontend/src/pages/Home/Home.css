@@ -1,3 +1,7 @@
+.login-button{
+    margin-right:'100px';
+}
+
 .Snippet{
 overflow-y: hidden; /* Hide vertical scrollbar */
 overflow-x: hidden; /* Hide horizontal scrollbar */

@@ -5,7 +5,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Snippet from './Snippet.png';
 
-class Login extends React.Component {
+class VLogin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,11 +13,6 @@ class Login extends React.Component {
       password: ''
     };
   }
-
-  handleClick = () => {
-    // Redirect to a new page
-    window.location.href = '/courses';
-  };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -122,7 +117,7 @@ class Login extends React.Component {
             position: 'absolute',
             top : '40%',
             left:'40%'}}>
-          <h2>Hi Student!</h2>
+          <h2>Hi Volunteer!</h2>
           <form onSubmit={this.handleFormSubmit}>
             <div className="form-group">
               <label>Email:</label>
@@ -144,7 +139,7 @@ class Login extends React.Component {
                 required
               />
             </div>
-            <button type="submit" className ='submit' onClick={this.handleClick}>LOGIN</button>
+            <button type="submit" className ='submit'>LOGIN</button>
           </form>
         </div>
       </div>
@@ -153,4 +148,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default VLogin;

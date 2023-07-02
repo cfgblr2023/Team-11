@@ -5,6 +5,9 @@ import Learning from './pages/Learning/Learning';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ViewCourses from './studentComponents/viewCourses';
 import Login from './studentComponents/login';
+import VLogin from './studentComponents/vlogin';
+// import ViewCourses from './studentComponents/viewCourses';
+// import Login from './studentComponents/login';
 
 import Display from "./pages/displayData/display";
 function App() {
@@ -16,8 +19,12 @@ function App() {
         <Route path="/courses" element={<ViewCourses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/display" element={<Display/>} />
+        <Route path="/courses" element={<ViewCourses />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/vlogin" element={<VLogin />} />
       </Routes>
     </Router>
+    
   );
 }
 

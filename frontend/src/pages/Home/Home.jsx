@@ -6,6 +6,8 @@ import tele from './tele.png';
 import footer from './footer.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css'
+import { Link } from 'react-router-dom';
+
 function Home () {
   return (
     <div className='Snippet'>
@@ -21,7 +23,7 @@ function Home () {
             <Nav.Link href="#">ALL CAMPAIGN</Nav.Link>
             <Nav.Link href="#">PROJECT</Nav.Link>
             <Nav.Link href="#">VOLUNTEERS</Nav.Link>
-            <Nav.Link href="#">LEARNINGS</Nav.Link>
+            {/* <Nav.Link href="#">LEARNINGS</Nav.Link> */}
             <NavDropdown title="REGISTER" id="register-dropdown">
             <NavDropdown.Item href="https://forms.gle/13mCom2jDYK83ZRLA">STUDENT</NavDropdown.Item>
             <NavDropdown.Item href="https://forms.gle/y68TqYbiJ1QCufKLA">VOLUNTEERS</NavDropdown.Item>
@@ -37,6 +39,10 @@ function Home () {
           <Nav.Link href="#">CONTACTS</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <NavDropdown title="LOGIN" id="login-dropdown"className='login-button'>
+            <NavDropdown.Item><Link to="/login">As Student</Link></NavDropdown.Item>
+            <NavDropdown.Item><Link to="/vlogin">As Volunteer</Link></NavDropdown.Item>
+          </NavDropdown>
       </Navbar>
       <img src={home} style={{width:'119.3%'}}/>
       <img src={footer} style={{width:'100%'}}/>
