@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import './Learning.css';
+import './volunteer.css';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 // import tele from './tele.png';
-import myImage from './bg.jpg';
-import myHeader from './Snippet.png';
-
+import myHeader from '../Home/Snippet.png'
 
 import tele from '../Home/tele.png';
 
@@ -63,7 +61,7 @@ const courses = [
   }
 ];
 
-const Learning = () => {
+const Volunteer = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('title');
   const [currentPage, setCurrentPage] = useState(1);
@@ -248,4 +246,4 @@ const Learning = () => {
   );
 };
 
-export default Learning;
+export default Volunteer;

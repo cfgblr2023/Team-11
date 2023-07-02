@@ -29,11 +29,11 @@ const Display = () => {
           <Nav.Link href="#">ALL CAMPAIGN</Nav.Link>
           <Nav.Link href="#">PROJECT</Nav.Link>
           <Nav.Link href="#">VOLUNTEERS</Nav.Link>
-          <Nav.Link href="#">LEARNINGS</Nav.Link>
-          <NavDropdown title="REGISTER" id="register-dropdown">
+          {/* <Nav.Link href="#">LEARNINGS</Nav.Link> */}
+          {/* <NavDropdown title="REGISTER" id="register-dropdown">
           <NavDropdown.Item href="https://forms.gle/13mCom2jDYK83ZRLA">STUDENT</NavDropdown.Item>
           <NavDropdown.Item href="https://forms.gle/y68TqYbiJ1QCufKLA">VOLUNTEERS</NavDropdown.Item>
-        </NavDropdown>
+        </NavDropdown> */}
         <NavDropdown title="CONNECT" id="connect-dropdown">
         <div className="telegram-link">
               <img src={tele} alt="Telegram" style={{ width: '15%' }} className="tele-logo" />

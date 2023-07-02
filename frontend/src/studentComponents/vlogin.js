@@ -25,6 +25,11 @@ class VLogin extends React.Component {
     console.log('Form submitted:', this.state);
   };
 
+  handleClick = () => {
+    // Redirect to a new page
+    window.location.href = '/volunteer';
+  };
+
   render() {
     const { email, password } = this.state;
 
@@ -139,7 +144,7 @@ class VLogin extends React.Component {
                 required
               />
             </div>
-            <button type="submit" className ='submit'>LOGIN</button>
+            <button type="submit" className ='submit' onClick={this.handleClick}>LOGIN</button>
           </form>
         </div>
       </div>

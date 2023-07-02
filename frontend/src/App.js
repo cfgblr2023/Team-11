@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ViewCourses from './studentComponents/viewCourses';
 import Login from './studentComponents/login';
 import VLogin from './studentComponents/vlogin';
+import Volunteer from './pages/Volunteer/volunteer';
 // import ViewCourses from './studentComponents/viewCourses';
 // import Login from './studentComponents/login';
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/courses" element={<ViewCourses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/vlogin" element={<VLogin />} />
+        <Route path="/volunteer" element={<Volunteer />} />
       </Routes>
     </Router>
     

@@ -24,7 +24,7 @@ class ViewCourses extends React.Component {
 
   handleViewCourses = () => {
     // this.setState({ showCourses: true });
-    console.log('View my Courses button clicked!');
+    window.location.href='/display';
   };
 
   handleRegisterCourse = () => {
